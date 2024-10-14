@@ -3,9 +3,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 from babel.numbers import format_currency
+
 sns.set(style="white")
-
-
 
 def create_rfm_df(df):
     """Buat DataFrame RFM dari DataFrame yang diberikan."""
@@ -34,7 +33,8 @@ def create_rfm_df(df):
 # Memuat data
 @st.cache_data
 def load_data():
-    return pd.read_csv("main_data.csv")
+    # Path relatif ke main_data.csv dari direktori root repository
+    return pd.read_csv("C:\College\Stupen\submission-analisis-data\dashboard\main_data.csv")
 
 # Memuat data
 all_df = load_data()
