@@ -18,5 +18,5 @@ pip install -r requirements.txt
 
 ## Run Streamlit
 ```
-streamlit run bike_dashboard.py
+streamlit run dashboard_bike.py
 ```
