@@ -34,7 +34,7 @@ def create_rfm_df(df):
 @st.cache_data
 def load_data():
     # Path relatif ke main_data.csv
-    DATA_PATH = "dashboard/main_data.csv"
+    DATA_PATH = "main_data.csv"  # Perbaikan path
     return pd.read_csv(DATA_PATH)
 
 # Memuat data
@@ -58,7 +58,7 @@ with st.sidebar:
 filtered_df = all_df[(all_df["dteday"] >= str(start_date)) & 
                      (all_df["dteday"] <= str(end_date))]
 
-st.header('Bike Sharing')
+st.header('Dashboard Bike Sharing')
 
 # Analisis RFM
 rfm_df = create_rfm_df(filtered_df)
@@ -98,8 +98,8 @@ if rfm_df is not None:
 
     st.pyplot(fig)
 
-# Pengelompokan - Pengelompokan Manual
-st.subheader('Pengelompokan - Pengelompokan Manual')
+# Pengelompokan Manual
+st.subheader('Pengelompokan Manual')
 
 # Menambahkan penjelasan tentang pengelompokan manual
 st.write("""
@@ -107,7 +107,8 @@ Pengelompokan manual dilakukan untuk mengelompokkan data penggunaan sepeda berda
 jumlah penggunaan, antara lain sebagai berikut:
 - **Penggunaan Rendah**: Jumlah penggunaan kurang dari 100.
 - **Penggunaan Sedang**: Jumlah penggunaan antara 100 dan 200.
-- **Penggunaan Tinggi**: Jumlah penggunaan lebih dari 200.
+- **Penggunaan Tinggi**: Jumlah penggunaan lebih dari 200.\n
+5 Data Awal:
 """)
 
 # Mendefinisikan kriteria pengelompokan manual
