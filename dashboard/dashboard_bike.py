@@ -35,7 +35,7 @@ def create_rfm_df(df):
 @st.cache_data
 def load_data():
     # Path relatif ke main_data.csv
-    base_dir = os.path.dirname(os.path.abspath(__file__)
+    base_dir = os.path.dirname(os.path.abspath(__file__))
     DATA_PATH = os.path.join(base_dir, "main_data.csv")
     return pd.read_csv(DATA_PATH)
 
