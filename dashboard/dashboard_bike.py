@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 from babel.numbers import format_currency
+import os
 
 sns.set(style="white")
 
@@ -34,7 +35,8 @@ def create_rfm_df(df):
 @st.cache_data
 def load_data():
     # Path relatif ke main_data.csv
-    DATA_PATH = "main_data.csv"
+    base_dir = os.path.dirname(os.path.abspath(__file__)
+    DATA_PATH = os.path.join(base_dir, "main_data.csv")
     return pd.read_csv(DATA_PATH)
 
 # Memuat data
