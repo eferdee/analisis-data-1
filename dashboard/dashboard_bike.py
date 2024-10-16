@@ -34,7 +34,7 @@ def create_rfm_df(df):
 @st.cache_data
 def load_data():
     # Path relatif ke main_data.csv dari direktori root repository
-    return pd.read_csv("main_data.csv")
+    return pd.read_csv("dashboard/main_data.csv")
 
 # Memuat data
 all_df = load_data()
