@@ -34,7 +34,7 @@ def create_rfm_df(df):
 @st.cache_data
 def load_data():
     # Path relatif ke main_data.csv
-    DATA_PATH = "main_data.csv"  # Perbaikan path
+    DATA_PATH = "main_data.csv"
     return pd.read_csv(DATA_PATH)
 
 # Memuat data
@@ -98,8 +98,8 @@ if rfm_df is not None:
 
     st.pyplot(fig)
 
-# Pengelompokan Manual
-st.subheader('Pengelompokan Manual')
+# Pengelompokan - Pengelompokan Manual
+st.subheader('Pengelompokan - Pengelompokan Manual')
 
 # Menambahkan penjelasan tentang pengelompokan manual
 st.write("""
