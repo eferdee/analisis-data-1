@@ -4,6 +4,7 @@ import seaborn as sns
 import streamlit as st
 import os
 
+st.set_page_config(page_title="Dashboard Bike Sharing", layout="wide")
 sns.set(style="white")
 
 WEATHER_LABELS = {1: 'Cerah', 2: 'Mendung', 3: 'Hujan'}
@@ -90,8 +91,6 @@ def load_data():
 all_df = load_data()
 min_date = all_df["dteday"].min()
 max_date = all_df["dteday"].max()
-
-st.set_page_config(page_title="Dashboard Bike Sharing", layout="wide")
 
 # ================= Sidebar =================
 with st.sidebar:
